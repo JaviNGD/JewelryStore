@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+
     test 'render a list of products' do
         get product_path 
 
@@ -20,8 +21,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         get new_product_path
 
         assert_response :success
-        assert_select 'form' 
-        end
+        assert_select 'form'
     end
 
     test 'create a new product' do
@@ -84,3 +84,4 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
        assert_equal 'El producto fue eliminado con éxito', flash[:notice]
     end
 
+end
