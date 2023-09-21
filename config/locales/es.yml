@@ -21,6 +21,7 @@ es:
               not_a_number: 'debe ser un número'
   common:
     confirm: '¿Estás seguro?'
+    back: 'Volver'
   shared:
     header:
       add: 'Añadir producto'
@@ -37,3 +38,20 @@ es:
       updated: 'El producto fue actualizado con éxito'
     destroy:
       destroyed: 'El producto fue eliminado con éxito'
+  categories:
+    category:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    index:
+      title: 'Categorías:'
+      new: 'Añadir categoría'
+    edit:
+      title: 'Editar categoría'
+    create:
+      created: 'La categoría fue publicada con éxito'
+    update:
+      updated: 'La categoría fue actualizada con éxito'
+    destroy:
+      destroyed: 'La categoría fue eliminada con éxito'
+    new:
+        title: 'Añadir categoría'

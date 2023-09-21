@@ -3,10 +3,6 @@ class ProductsController < ApplicationController
         @products = Product.all.with_attached_image
     end
 
-    def show
-        product
-    end
-
     def new
         @product = Product.new
     end
