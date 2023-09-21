@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProyectoRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render 'shared/flash' %>
+    <%= render 'shared/header' %>
+    <%= yield %>
+  </body>
+
+  <%= javascript_include_tag "turbo", type: "module" %> 
+
+</html>
