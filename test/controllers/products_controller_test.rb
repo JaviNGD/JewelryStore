@@ -3,10 +3,18 @@ require 'test_helper'
 class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     test 'render a list of products' do
-        get product_path 
+        get product_path
 
         assert_response :success
         assert_select '.product', 2
+        assert_select '.category', 3
+    end
+
+    test 'render a list of products filtered by category' do
+        get product_path(category_id: categories(:one).id)
+
+        assert_response :success
+        assert_select '.product', 1
     end
 
     test 'render the product page' do
@@ -28,7 +36,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         post products_path, params: { 
             product: { 
                 title: 'MyString', 
-                description: 'MyText', 
+                description: 'MyText',
+                category_id: categories(:one).id,
                 price: 1 
             } 
         }

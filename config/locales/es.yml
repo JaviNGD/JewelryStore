@@ -32,6 +32,10 @@ es:
       title: 'Añadir producto'
     index:
       title: 'Productos:'
+      all: 'Todos'
+    show:
+      edit: 'Editar producto'
+      delete: 'Eliminar producto'
     create:
       created: 'El producto fue publicado con éxito'
     update:

@@ -4,8 +4,12 @@ one:
   title: MyString
   description: MyText
   price: 1
+  category: aros
 
 two:
   title: MyString
   description: MyText
   price: 1
+  category: collares
+
+

@@ -1,8 +1,16 @@
 class ProductsController < ApplicationController
     def index
-        @products = Product.all.with_attached_image
+        @categories = Category.order(name: :asc).load_async
+        @products = Product.with_attached_image.order(created_at: :desc).load_async
+
+        if params[:category_id]
+            @products = @products.where(category_id: params[:category_id])
+        end
     end
 
+    def show
+        product
+    end
     def new
         @product = Product.new
     end
@@ -38,7 +46,7 @@ class ProductsController < ApplicationController
     private
 
     def product_params
-        params.require(:product).permit(:title, :description, :price, :image)
+        params.require(:product).permit(:title, :description, :price, :image, :category_id)
     end
 
     def product
