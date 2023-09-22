@@ -17,12 +17,36 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         assert_select '.product', 1
     end
 
+    test 'search a product' do
+        get product_path(search: 'collar')
+
+        assert_response :success
+        assert_select '.product', 1
+        assert_select 'h2', 'Collar test'
+    end
+
     test 'render a list of products filtered by min_price and max_price' do
         get product_path(min_price: 160, max_price: 200)
 
         assert_response :success
         assert_select '.product', 1
         assert_select 'h2', 'Collar test'
+    end
+
+    test 'sort products by expensive prices first' do
+        get product_path(order_by: 'expensive')
+
+        assert_response :success
+        assert_select '.product', 2
+        assert_select '.products .product:first-child h2', 'Collar test'
+    end
+
+    test 'sort products by cheapest prices first' do
+        get product_path(order_by: 'cheapest')
+
+        assert_response :success
+        assert_select '.product', 2
+        assert_select '.products .product:first-child h2', 'MyString'
     end
 
     test 'render the product page' do

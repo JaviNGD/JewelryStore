@@ -68,3 +68,9 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+# Postgresql full text search
+gem "pg_search", "~> 2.3"
+
+# Pagination
+gem "pagy", "~> 6.0"
