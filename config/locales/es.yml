@@ -3,24 +3,21 @@ es:
   meta_title: 'Joyas y Accesorios'
   activerecord:
     models:
-      product: 'Producto'
+      product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         image: 'Imagen'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacía'
-            price:
-              blank: 'no puede estar vacío'
-              not_a_number: 'debe ser un número'
+      user:
+        email: 'Email'
+        username: 'Nombre de usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
@@ -28,6 +25,10 @@ es:
   shared:
     header:
       add: 'Añadir producto'
+      categories: 'Categorías'
+      login: 'Iniciar sesión'
+      register: 'Registrarse'
+      logout: 'Cerrar sesión'
   authentication:
     users:
       create:
@@ -36,6 +37,8 @@ es:
       create:
         created: '¡Bienvenido!'
         failed: '¡Login inválido!'
+      destroy:
+        destroyed: 'Sesión finalizada, ¡vuelve pronto!'
   products:
     edit:
       title: 'Editar producto'
