@@ -1,4 +1,6 @@
 es:
+  app_name: 'Joalheria'
+  meta_title: 'Joyas y Accesorios'
   activerecord:
     models:
       product: 'Producto'
@@ -25,6 +27,14 @@ es:
   shared:
     header:
       add: 'Añadir producto'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta fue creada con éxito'
+    sessions:
+      create:
+        created: '¡Bienvenido!'
+        failed: '¡Login inválido!'
   products:
     edit:
       title: 'Editar producto'
