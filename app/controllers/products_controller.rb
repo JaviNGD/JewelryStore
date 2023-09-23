@@ -24,21 +24,23 @@ class ProductsController < ApplicationController
     end
 
     def edit
-        product
+      authorize! product
     end
 
     def update
-        if product.update(product_params)
-            redirect_to product_path, notice: t('.updated')
-        else
-            render :edit, status: :unprocessable_entity, alert: 'El producto no pudo ser actualizado'
-        end
+      authorize! product
+      if product.update(product_params)
+        redirect_to product_path, notice: t('.updated')
+      else
+        render :edit, status: :unprocessable_entity, alert: 'El producto no pudo ser actualizado'
+      end
     end
 
-    def destroy 
-        product.destroy
+    def destroy
+      authorize! product
+      product.destroy
 
-        redirect_to products_path, notice: t('.destroyed') , status: :see_other
+      redirect_to products_path, notice: t('.destroyed') , status: :see_other
     end
 
     private
