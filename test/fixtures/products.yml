@@ -5,11 +5,12 @@ one:
   description: MyText
   price: 1
   category: aros
+  user: one
 
 two:
   title: Collar test
   description: MyText
   price: 180
   category: collares
-
+  user: two
 
