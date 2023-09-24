@@ -23,6 +23,9 @@ en:
       back: 'Go back'
       not_logged_in: 'You have to be login or register to continue'
       not_authorized: 'You don not have permissions for this action'
+    users:
+      common:
+        not_found: 'Not found'
     shared:
       header:
         add: 'Add product'
@@ -57,6 +60,7 @@ en:
       show:
         edit: 'Edit product'
         delete: 'Delete product'
+        view_more_products: 'View more products by %{username}'
       create:
           created: 'Your product has been successfully created'
       update:
