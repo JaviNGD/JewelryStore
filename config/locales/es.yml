@@ -33,6 +33,7 @@ es:
       login: 'Iniciar sesión'
       register: 'Registrarse'
       logout: 'Cerrar sesión'
+      favorites: 'Mis favoritos'
   authentication:
     users:
       create:
@@ -84,3 +85,6 @@ es:
       destroyed: 'La categoría fue eliminada con éxito'
     new:
         title: 'Añadir categoría'
+  favorites:
+    index:
+      title: 'Mis favoritos'
